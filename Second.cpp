@@ -46,7 +46,7 @@ void printWorker(const worker& newWorker) {
 
 void sortByLastName(worker* sortLastName, int size) {
 	if (!sortLastName) {
-		cout << "is NULL" << endl << endl;
+		cout << "Null" << endl << endl;
 		return;
 	}
 	for (int i = 0; i < size - 1; ++i) {
@@ -62,7 +62,7 @@ void sortByLastName(worker* sortLastName, int size) {
 
 void delWorker(worker* workers, int& quantity) {
 	if (!workers) {
-		cout << "is NULL" << endl << endl;
+		cout << "Null" << endl << endl;
 		return;
 	}
 
@@ -116,7 +116,7 @@ void delWorker(worker* workers, int& quantity) {
 
 void searchByLastName(worker* newWorker, int size, char* searchLastName) {
 	if (!newWorker) {
-		cout << "is NULL" << endl << endl;
+		cout << "Null" << endl << endl;
 		return;
 	}
 	bool found = false;
@@ -137,7 +137,7 @@ void searchByLastName(worker* newWorker, int size, char* searchLastName) {
 
 void searchBySalaryRange(const worker* workers, int quantity, double minSalary, double maxSalary) {
 	if (!workers) {
-		cout << "is NULL" << endl << endl;
+		cout << "Null" << endl << endl;
 		return;
 	}
 	bool found = false;
@@ -158,7 +158,7 @@ void searchBySalaryRange(const worker* workers, int quantity, double minSalary, 
 
 bool onlyLetters(const char* content) {
 	if (!content) {
-		cout << "is NULL" << endl << endl;
+		cout << "Null" << endl << endl;
 		return false;
 	}
 	for (int i = 0; i < strlen(content); i++) {
@@ -172,7 +172,7 @@ bool onlyLetters(const char* content) {
 }
 bool onlyDigits(const char* content) {
 	if (!content) {
-		cout << "is NULL" << endl << endl;
+		cout << "Null" << endl << endl;
 		return false;
 	}
 	for (int i = 0; i < strlen(content); i++) {
@@ -186,7 +186,7 @@ bool onlyDigits(const char* content) {
 }
 bool numberOfCharacters(const char* content) {
 	if (!content) {
-		cout << "is NULL" << endl << endl;
+		cout << "Null" << endl << endl;
 		return false;
 	}
 	if (strlen(content) < 8) {
