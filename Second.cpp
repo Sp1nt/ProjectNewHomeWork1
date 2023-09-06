@@ -45,7 +45,10 @@ void printWorker(const worker& newWorker) {
 
 
 void sortByLastName(worker* sortLastName, int size) {
-
+	if (!sortLastName) {
+		cout << "is NULL" << endl << endl;
+		return;
+	}
 	for (int i = 0; i < size - 1; ++i) {
 		for (int j = 0; j < size - i - 1; ++j) {
 			if (strcmp(sortLastName[j].lastName, sortLastName[j + 1].lastName) > 0) {
@@ -58,6 +61,12 @@ void sortByLastName(worker* sortLastName, int size) {
 }
 
 void delWorker(worker* workers, int& quantity) {
+	if (!workers) {
+		cout << "is NULL" << endl << endl;
+		return;
+	}
+
+	
 	if (quantity <= 0) {
 		cout << "There are no worker to remove." << endl;
 		return;
@@ -106,6 +115,10 @@ void delWorker(worker* workers, int& quantity) {
 
 
 void searchByLastName(worker* newWorker, int size, char* searchLastName) {
+	if (!newWorker) {
+		cout << "is NULL" << endl << endl;
+		return;
+	}
 	bool found = false;
 	for (int i = 0; i < size; i++) {
 		if (strcmp(newWorker[i].lastName, searchLastName) == 0) {
@@ -123,6 +136,10 @@ void searchByLastName(worker* newWorker, int size, char* searchLastName) {
 
 
 void searchBySalaryRange(const worker* workers, int quantity, double minSalary, double maxSalary) {
+	if (!workers) {
+		cout << "is NULL" << endl << endl;
+		return;
+	}
 	bool found = false;
 
 
@@ -140,6 +157,10 @@ void searchBySalaryRange(const worker* workers, int quantity, double minSalary, 
 }
 
 bool onlyLetters(const char* content) {
+	if (!content) {
+		cout << "is NULL" << endl << endl;
+		return false;
+	}
 	for (int i = 0; i < strlen(content); i++) {
 		if (isdigit(content[i])) {
 			cout << "You wrong input symbol!" << endl << endl;
@@ -150,6 +171,10 @@ bool onlyLetters(const char* content) {
 	return false;
 }
 bool onlyDigits(const char* content) {
+	if (!content) {
+		cout << "is NULL" << endl << endl;
+		return false;
+	}
 	for (int i = 0; i < strlen(content); i++) {
 		if (isalpha(content[i]) || content[i] == ' ') {
 			cout << "You wrong input symbol!" << endl << endl;
@@ -160,6 +185,10 @@ bool onlyDigits(const char* content) {
 	return false;
 }
 bool numberOfCharacters(const char* content) {
+	if (!content) {
+		cout << "is NULL" << endl << endl;
+		return false;
+	}
 	if (strlen(content) < 8) {
 		cout << "The length should not be less than 8 characters!" << endl << endl;
 		return true;
