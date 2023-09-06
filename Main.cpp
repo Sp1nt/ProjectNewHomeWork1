@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Second.h"
+#include "File.h"
 #include <string>
 
 using namespace std;
@@ -80,7 +81,7 @@ int main() {
                         break; 
                     }
                     else if (subChoice == 'S' || subChoice == 's') {
-                        cout << "Введите ключ: ";
+                        cout << "Input key: ";
                         cin >> temp;
 
                         char* key = new char[strlen(temp)];
@@ -140,11 +141,11 @@ int main() {
                 break;
 
             case '7': 
-                
+                saveDataToFile(newWorker, quantity);
 
                 break;
             case '8': 
-               
+                readFile();
                 break;
             case '9': 
 

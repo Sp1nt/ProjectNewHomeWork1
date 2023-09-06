@@ -1,1 +1,3 @@
-#pragma once
+void saveDataToFile( worker*, int);
+
+void readFile();

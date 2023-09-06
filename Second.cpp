@@ -23,8 +23,6 @@ void inputWorker(worker& newWorker) {
 		cin >> newWorker.number;
 	} while (onlyDigits(newWorker.number) || numberOfCharacters(newWorker.number));
 
-
-
 	do {
 		cout << "Salary: ";
 		cin >> temp;
