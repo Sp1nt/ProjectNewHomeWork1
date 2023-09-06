@@ -117,7 +117,7 @@ void searchByLastName(worker* newWorker, int size, char* searchLastName) {
 	}
 
 	if (!found) {
-		cout << "Ключ не найден!" << endl;;
+		cout << "Key not found!" << endl;;
 	}
 }
 
