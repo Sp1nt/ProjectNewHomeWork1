@@ -101,20 +101,24 @@ int main() {
             case '4': 
             {
                 char subChoice;
-                cout << "B. Back to main menu, C. Continue to search: ";
+                cout << "B. Back to main menu, S. Continue to search: ";
                 cin >> subChoice;
                 cin.ignore();
 
                 if (subChoice == 'D' || subChoice == 'd') {
                     break; 
                 }
-
+                else if (subChoice == 'S' || subChoice == 's') {
                 double minSalary, maxSalary;
                 cout << "Enter the minimum and maximum wages to search for: ";
                 cin >> minSalary >> maxSalary;
 
                 cout << "Result  searched:" << endl;
                 searchBySalaryRange(newWorker, quantity, minSalary, maxSalary);
+                }
+                else {
+                    cout << "Wrong choice. Please select 'D' or 'S'" << endl;
+                }
             }
             break;
             case '5':
@@ -127,12 +131,16 @@ int main() {
                 if (subChoice == 'D' || subChoice == 'd') {
                     break; 
                 }
-
+                else if (subChoice == 'S' || subChoice == 's') {
                 cout << "Index list worker:" << endl;
                 printEmployeeList(newWorker, quantity);
 
                 cout << endl << "Delete worker for index:" << endl;
                 delWorker(newWorker, quantity);
+                }
+                else {
+                    cout << "Wrong choice. Please select 'D' or 'S'" << endl;
+                }
             }
             break;
             case '6': 
